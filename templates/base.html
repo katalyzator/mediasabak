@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Sabak</title>
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+{% block content %}
+
+
+
+{% endblock %}
+
+<script src="{% static 'js/libs.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+
+{% block scripts %}
+
+{% endblock %}
+</body>
+</html>
