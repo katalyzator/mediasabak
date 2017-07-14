@@ -22,7 +22,8 @@ from mediasabak import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', 'main.views.index_view', name='index'),
-    url(r'^lessons/$', 'main.views.lesson_page_view', name='lessons')
+    url(r'^lessons/$', 'main.views.lesson_page_view', name='lessons'),
+    url(r'^videolessons/$', 'main.views.video_lesson_view', name='videolessons')
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
