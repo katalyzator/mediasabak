@@ -18,8 +18,8 @@ def lesson_page_view(request):
 
 
 def video_lesson_view(request):
-    lessons = Lesson.objects.all()
-    context = {"lessons": lessons}
+    videos = Video.objects.all()
+    context = {"lessons": videos}
     template = 'video-lessons.html'
 
     return render(request, template, context)

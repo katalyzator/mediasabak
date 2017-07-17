@@ -5,7 +5,7 @@ from .models import *
 
 class LessonAdmin(admin.ModelAdmin):
     class Meta:
-        model = Lesson
+        model = Video
 
 
-admin.site.register(Lesson, LessonAdmin)
+admin.site.register(Video, LessonAdmin)
