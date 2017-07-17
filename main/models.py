@@ -18,3 +18,4 @@ class Lesson(models.Model):
     def __unicode__(self):
         return smart_unicode(self.name)
 
+
