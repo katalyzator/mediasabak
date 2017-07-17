@@ -37,3 +37,10 @@ def about_view(request):
     template = 'about.html'
 
     return render(request, template, context)
+
+
+def more_view(request):
+    context = {}
+    template = 'more-information.html'
+
+    return render(request, template, context)

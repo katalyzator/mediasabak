@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^$', 'main.views.index_view', name='index'),
     url(r'^lessons/$', 'main.views.lesson_page_view', name='lessons'),
     url(r'^about/$', 'main.views.about_view', name='about'),
+    url(r'^more/$', 'main.views.more_view', name='more'),
     url(r'^education/$', 'main.views.education_view', name='education'),
     url(r'^videolessons/$', 'main.views.video_lesson_view', name='videolessons')
 ]
