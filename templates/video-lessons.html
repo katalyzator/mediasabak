@@ -22,85 +22,18 @@
 
                 <div class="vid-list-container">
                     <div class="vid-list">
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
+                        {% for item in lessons %}
+                            <div class="vid-item"
+                                 onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/{{ item.link }}?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb">
+                                    <img src="http://img.youtube.com/vi/{{ item.link }}/0.jpg">
+                                </div>
+                                <div class="desc">
+                                    {{ item.name }}
+                                </div>
                             </div>
-                            <div class="desc">
-                                Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]
-                            </div>
-                        </div>
+                        {% endfor %}
 
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Nurbek Avtandilov
-                            </div>
-                        </div>
-
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Aybek Rayimbekov
-                            </div>
-                        </div>
-
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/G4NcpKLecqc?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/G4NcpKLecqc/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]
-                            </div>
-                        </div>
-
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]
-                            </div>
-                        </div>
-
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]
-                            </div>
-                        </div>
-
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]
-                            </div>
-                        </div>
-
-                        <div class="vid-item"
-                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            <div class="thumb">
-                                <img src="http://img.youtube.com/vi/JGwWNGJdvx8/0.jpg">
-                            </div>
-                            <div class="desc">
-                                Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video]
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

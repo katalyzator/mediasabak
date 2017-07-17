@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import *
+
 
 def index_view(request):
     context = {}
@@ -16,7 +18,8 @@ def lesson_page_view(request):
 
 
 def video_lesson_view(request):
-    context = {}
+    lessons = Lesson.objects.all()
+    context = {"lessons": lessons}
     template = 'video-lessons.html'
 
     return render(request, template, context)
