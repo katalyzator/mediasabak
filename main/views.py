@@ -23,3 +23,10 @@ def video_lesson_view(request):
     template = 'video-lessons.html'
 
     return render(request, template, context)
+
+
+def education_view(request):
+    context = {}
+    template = 'education.html'
+
+    return render(request, template, context)

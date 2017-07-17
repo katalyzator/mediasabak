@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^$', 'main.views.index_view', name='index'),
     url(r'^lessons/$', 'main.views.lesson_page_view', name='lessons'),
+    url(r'^education/$', 'main.views.education_view', name='education'),
     url(r'^videolessons/$', 'main.views.video_lesson_view', name='videolessons')
 ]
 

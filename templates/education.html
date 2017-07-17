@@ -1,41 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Media Sabak</title>
-	<link rel="stylesheet" href="css/libs.min.css">
-	<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-	<header>
-		<div class="header grid">
-			<a href="#"><img src="img/defaul_logo.png" alt="image"></a>
-		</div>
-	</header>
-	<main class="education_bg">
-		<div class="grid">
-			<div class="e_content">
-				<ul class="e_section e_section1">
-					<li><a href="#">журналистика и<br>медиаграмотность</a></li>
-					<li><a href="#">информационная еда</a></li>
-					<li><a href="#">влияние информации<br>на человека</a></li>
-					<li><a href="#">информация<br>и медиа </a></li>
-				</ul>
+{% load staticfiles %}
 
-				<ul class="e_section e_section2">
-					<li><a href="#">критический анализ<br>медиа продуктов</a></li>
-					<li><a href="#">критическое<br>мышление</a></li>
-					<li><a href="#">таблица</a></li>
-					<li><a href="#">тема номер 8 </a></li>
-				</ul>
-				<img src="img/education_menu_img.png" alt="image">
-			</div>
-		</div>
-	</main>
+{% block content %}
 
+    {% include 'header.html' %}
+    <main class="education_bg">
+        <div class="grid">
+            <div class="e_content">
+                <ul class="e_section e_section1">
+                    <li><a href="#">журналистика и<br>медиаграмотность</a></li>
+                    <li><a href="#">информационная еда</a></li>
+                    <li><a href="#">влияние информации<br>на человека</a></li>
+                    <li><a href="#">информация<br>и медиа </a></li>
+                </ul>
 
-	<script src="js/libs.min.js"></script>	
-	<script src="js/common.js"></script>	
-</body>
-</html>
+                <ul class="e_section e_section2">
+                    <li><a href="#">критический анализ<br>медиа продуктов</a></li>
+                    <li><a href="#">критическое<br>мышление</a></li>
+                    <li><a href="#">таблица</a></li>
+                    <li><a href="#">тема номер 8 </a></li>
+                </ul>
+                <img src="{% static 'img/education_menu_img.png' %}" alt="image">
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
