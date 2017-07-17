@@ -30,3 +30,10 @@ def education_view(request):
     template = 'education.html'
 
     return render(request, template, context)
+
+
+def about_view(request):
+    context = {}
+    template = 'about.html'
+
+    return render(request, template, context)
