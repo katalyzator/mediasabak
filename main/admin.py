@@ -13,6 +13,18 @@ class LessonAdmin(admin.ModelAdmin):
         model = Lesson
 
 
+class LessonInline(admin.StackedInline):
+    model = Lesson
+    max_num = 200
+    extra = 0
+
+
+class LessonTypeInline(admin.ModelAdmin):
+    inlines = [LessonInline, ]
+
+
+admin.site.register(LessonType, LessonTypeInline)
+
 admin.site.register(Lesson, LessonAdmin)
 
 admin.site.register(Video, VideoAdmin)
