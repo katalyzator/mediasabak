@@ -24,11 +24,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^$', 'main.views.index_view', name='index'),
-    url(r'^lessons/$', 'main.views.lesson_page_view', name='lessons'),
+    url(r'^lessons/(?P<id>\d+)/$', 'main.views.lesson_page_view', name='lessons'),
     url(r'^about/$', 'main.views.about_view', name='about'),
     url(r'^more/$', 'main.views.more_view', name='more'),
     url(r'^education/$', 'main.views.education_view', name='education'),
-    url(r'^videolessons/$', 'main.views.video_lesson_view', name='videolessons')
+    url(r'^videolessons/$', 'main.views.video_lesson_view', name='videolessons'),
+    url(r'^lesson/(?P<id>\d+)/$', 'main.views.single_lesson', name='single_lesson'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

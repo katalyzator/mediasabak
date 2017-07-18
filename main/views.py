@@ -10,10 +10,15 @@ def index_view(request):
     return render(request, template, context)
 
 
-def lesson_page_view(request):
-    lesson = Lesson.objects.all()
-    context = {}
+def lesson_page_view(request, id):
+    all_lesson = Lesson.objects.all().filter(lesson_type_id=id)
+    lesson = all_lesson.first()
+    sliderimage = ImageSlide.objects.filter(lesson__lesson_type_id=id)
+    request.session['id'] = id
+
+    context = {"lesson": lesson, "images": sliderimage, "all_lesson": all_lesson}
     template = 'lesson-page.html'
+    print sliderimage
 
     return render(request, template, context)
 
@@ -27,7 +32,9 @@ def video_lesson_view(request):
 
 
 def education_view(request):
-    context = {}
+    lesson_type1 = LessonType.objects.all().order_by('timestamp')[0:4]
+    lesson_type2 = LessonType.objects.all().order_by('timestamp')[4:8]
+    context = {"lesson_type1": lesson_type1, "lesson_type2": lesson_type2}
     template = 'education.html'
 
     return render(request, template, context)
@@ -43,5 +50,17 @@ def about_view(request):
 def more_view(request):
     context = {}
     template = 'more-information.html'
+
+    return render(request, template, context)
+
+
+def single_lesson(request, id):
+    lesson = Lesson.objects.get(id=id)
+    all_lesson = Lesson.objects.all().filter(lesson_type_id=request.session['id'])
+    sliderimage = ImageSlide.objects.all().filter(lesson=lesson)
+
+    context = {"lesson": lesson, "images": sliderimage, "all_lesson": all_lesson}
+
+    template = 'lesson-page.html'
 
     return render(request, template, context)

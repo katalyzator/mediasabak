@@ -26,6 +26,9 @@ class LessonType(models.Model):
 
     name = models.CharField(max_length=255, verbose_name='Название категории')
 
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата создания')
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
     def __unicode__(self):
         return self.name
 
