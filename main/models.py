@@ -53,7 +53,7 @@ class Lesson(models.Model):
     text_type = RichTextUploadingField(verbose_name='Текст урока')
     lesson_type = models.ForeignKey(LessonType, verbose_name='Выберите категорию видеоурока')
     audio = models.FileField(upload_to='files/audio', verbose_name='audiofile')
-    imageslide = models.ManyToManyField(ImageSlide, verbose_name='slider image')
+    imageslide = models.ManyToManyField(ImageSlide, verbose_name='slider image 765x410')
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата создания')
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
