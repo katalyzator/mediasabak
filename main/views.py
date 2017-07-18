@@ -11,6 +11,7 @@ def index_view(request):
 
 
 def lesson_page_view(request):
+    lesson = Lesson.objects.all()
     context = {}
     template = 'lesson-page.html'
 
