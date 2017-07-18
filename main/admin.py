@@ -23,6 +23,13 @@ class LessonTypeInline(admin.ModelAdmin):
     inlines = [LessonInline, ]
 
 
+class SliderImageAdmin(admin.ModelAdmin):
+    class Meta:
+        model = ImageSlide
+
+
+admin.site.register(ImageSlide, SliderImageAdmin)
+
 admin.site.register(LessonType, LessonTypeInline)
 
 admin.site.register(Lesson, LessonAdmin)
