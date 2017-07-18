@@ -8,100 +8,89 @@
     <main class="lesson_bg">
         <div class="grid">
 
-            <div class="tabs-stage">
-                <div id="tab-1">
-                    <h4>Nurbek</h4>
-                </div>
-                <div id="tab-2">
-                    <h4>Nurbek</h4>
-                </div>
+            <div class="lesson_container">
+                <div class="tabs-stage">
+                    <div id="tab-1">
+                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>
 
-                <div id="tab-3">
-                    <!-- <video width="70.5%" height="400px" controls>
-                        <source src="videos/Молдир Ауелбекова АДЕМИ КЫЗ.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> -->
+                        <div class="slider">
+                            <div class="sl_slide">
+                                <img src="{% static 'img/p_slider_img1.jpg' %}" alt="">
+                            </div>
 
-                    <div class="video_lesson">
-                        <iframe id="vid_frame"
-                                src="https://www.youtube.com/embed/kJQP7kiw5Fk?list=RDpapuvlVeZg8?ecver=1"
-                                frameborder="0" allowfullscreen></iframe>
+                            <div class="sl_slide">
+                                <img src="{% static 'img/p_slider_img1.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2">
+                        <h4>Nurbek</h4>
                     </div>
 
-                    <ul class="list_video">
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            1. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            2. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            3. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            4. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            5. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            6. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            7. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            8. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            9. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            10. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            11. Информация и масс медиа
-                        </li>
-                        <li onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/JGwWNGJdvx8?autoplay=1&rel=0&showinfo=0&autohide=1'">
-                            12. Информация и масс медиа
-                        </li>
-                    </ul>
+                    <div id="tab-3">
+                        <!-- <video width="70.5%" height="400px" controls>
+                            <source src="videos/Молдир Ауелбекова АДЕМИ КЫЗ.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video> -->
 
+                        <div class="video_lesson">
+                            <iframe id="vid_frame"
+                                    src="https://www.youtube.com/embed/kJQP7kiw5Fk?list=RDpapuvlVeZg8?ecver=1"
+                                    frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
                 </div>
+
+                <ul class="tabs-nav">
+                    <li>
+                        <a href="#tab-1">
+                            <img src="{% static 'img/power_point.png' %}" alt="image">
+                        </a>
+                        <div class="help_text">
+                            <span>выберите  просмотр презентации</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#tab-2">
+                            <img src="{% static 'img/word.png' %}" alt="image">
+                        </a>
+                        <div class="help_text">
+                            <span>выберите  просмотр презентации</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#tab-3">
+                            <img src="{% static 'img/video_icon.png' %}" alt="image">
+                        </a>
+                        <div class="help_text">
+                            <span>выберите  просмотр презентации</span>
+                        </div>
+                    </li>
+                    <li>
+                        <audio controls>
+                            <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                            <!-- <source src="horse.mp3" type="audio/mpeg"> -->
+                            Your browser does not support the audio element.
+                        </audio>
+                    </li>
+                </ul>
             </div>
 
-            <ul class="tabs-nav">
-                <li>
-                    <a href="#tab-1">
-                        <img src="{% static 'img/power_point.png' %}" alt="image">
-                    </a>
-                    <div class="help_text">
-                        <span>выберите  просмотр презентации</span>
-                    </div>
+            <ul class="list_lesson">
+                <li class="hamburger_collapsed">
+                    <div class="hamburger"></div>
                 </li>
-                <li>
-                    <a href="#tab-2">
-                        <img src="{% static 'img/word.png' %}" alt="image">
-                    </a>
-                    <div class="help_text">
-                        <span>выберите  просмотр презентации</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="#tab-3">
-                        <img src="{% static 'img/video_icon.png' %}" alt="image">
-                    </a>
-                    <div class="help_text">
-                        <span>выберите  просмотр презентации</span>
-                    </div>
-                </li>
-                <li>
-                    <audio controls>
-                        <!-- <source src="horse.ogg" type="audio/ogg"> -->
-                        <!-- <source src="horse.mp3" type="audio/mpeg"> -->
-                        Your browser does not support the audio element.
-                    </audio>
-                </li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
+                <li><a href="#">1. Информация и масс медиа</a></li>
             </ul>
 
         </div>
