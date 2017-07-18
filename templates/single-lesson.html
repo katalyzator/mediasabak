@@ -11,27 +11,26 @@
             <div class="lesson_container">
                 <div class="tabs-stage">
                     <div id="tab-1">
-                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>
+{#                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>#}
 
                         <div class="slider">
-                            <div class="sl_slide">
-                                <img src="{% static 'img/p_slider_img1.jpg' %}" alt="">
-                            </div>
-
-                            <div class="sl_slide">
-                                <img src="{% static 'img/more_information.jpg' %}" alt="">
-                            </div>
+                            {% for item in images %}
+                                <div class="sl_slide">
+                                    <img src="{{ item.image.url }}" alt="">
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div id="tab-2">
                         <h4>Nurbek</h4>
+                        {{ lesson.text_type|safe }}
                     </div>
 
                     <div id="tab-3">
 
                         <div class="video_lesson">
                             <iframe id="vid_frame"
-                                    src="https://www.youtube.com/embed/kJQP7kiw5Fk?list=RDpapuvlVeZg8?ecver=1"
+                                    src="https://www.youtube.com/embed/{{ lesson.link }}?list=RDpapuvlVeZg8?ecver=1"
                                     frameborder="0" allowfullscreen></iframe>
                         </div>
 
@@ -68,10 +67,10 @@
 {#                            <!—#}
 {#                            <source src="horse.ogg" type="audio/ogg">#}
 {#                            —>#}
-{#                            <!—#}
-{#                            <source src="horse.mp3" type="audio/mpeg">#}
-{#                            —>#}
-                            Your browser does not support the audio element.
+
+                            <source src="{{ lesson.audio.url }}" type="audio/mp3">
+
+
                         </audio>
                     </li>
                 </ul>

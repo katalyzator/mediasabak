@@ -61,6 +61,6 @@ def single_lesson(request, id):
 
     context = {"lesson": lesson, "images": sliderimage, "all_lesson": all_lesson}
 
-    template = 'lesson-page.html'
+    template = 'single-lesson.html'
 
     return render(request, template, context)

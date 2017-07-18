@@ -11,19 +11,20 @@
             <div class="lesson_container">
                 <div class="tabs-stage">
                     <div id="tab-1">
-                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>
+{#                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>#}
 
                         <div class="slider">
-                            {% for item in images %}
-                                <div class="sl_slide">
-                                    <img src="{{ item.image.url }}" alt="">
-                                </div>
-                            {% endfor %}
+                                {% for item in images %}
+                                    <div class="sl_slide">
+                                        <img src="{{ item.image.url }}" alt="">
+                                    </div>
+                                {% endfor %}
 
                         </div>
                     </div>
                     <div id="tab-2">
                         <h4>Nurbek</h4>
+                        {{ lesson.text_type|safe }}
                     </div>
 
                     <div id="tab-3">
