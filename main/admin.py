@@ -28,6 +28,25 @@ class SliderImageAdmin(admin.ModelAdmin):
         model = ImageSlide
 
 
+class TestInline(admin.StackedInline):
+    model = Test
+    max_num = 200
+    extra = 0
+
+
+class LessonTestInline(admin.ModelAdmin):
+    inlines = [TestInline, ]
+
+
+class TestAdmin(admin.ModelAdmin):
+    class Meta:
+        model = Test
+
+
+admin.site.register(LessonTest, LessonTestInline)
+
+admin.site.register(Test, TestAdmin)
+
 admin.site.register(ImageSlide, SliderImageAdmin)
 
 admin.site.register(LessonType, LessonTypeInline)

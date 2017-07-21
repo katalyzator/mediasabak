@@ -10,7 +10,7 @@ $(function () {
 
 
     $('.tabs-stage > div').hide();
-    $('.tabs-stage > div:nth-child(3)').show();
+    $('.tabs-stage > div:nth-child(1)').show();
     $('.tabs-nav > li:first-child a').addClass('tab-active');
 
     $('.tabs-nav > li > a').on('click', function (event) {

@@ -57,8 +57,36 @@ class Lesson(models.Model):
     lesson_type = models.ForeignKey(LessonType, verbose_name='Выберите категорию видеоурока')
     audio = models.FileField(upload_to='files/audio', verbose_name='audiofile')
     imageslide = models.ManyToManyField(ImageSlide, verbose_name='slider image 765x410')
+    test = models.ManyToManyField('LessonTest', verbose_name='Выберите тест', blank=True)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата создания')
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+    def __unicode__(self):
+        return smart_unicode(self.name)
+
+
+class Test(models.Model):
+    class Meta:
+        verbose_name_plural = 'Тесты'
+        verbose_name = 'Тест'
+
+    name = models.CharField(max_length=500, verbose_name='Вопрос теста')
+    image = models.ImageField(upload_to='images/test', verbose_name='Картинка для теста')
+    true = models.BooleanField(verbose_name='Фейк')
+    false = models.BooleanField(verbose_name='Не Фейк')
+    test = models.ForeignKey('LessonTest', verbose_name='Выберите тесты', blank=True)
+
+    def __unicode__(self):
+        return smart_unicode(self.name)
+
+
+class LessonTest(models.Model):
+    class Meta:
+        verbose_name_plural = 'Тесты для уроков'
+        verbose_name = 'Тест'
+
+    name = models.CharField(max_length=500, verbose_name='Название')
+    check = models.CharField(max_length=255, default='test', blank=True, null=True)
 
     def __unicode__(self):
         return smart_unicode(self.name)
