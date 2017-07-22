@@ -51,7 +51,7 @@ class Lesson(models.Model):
     class Meta:
         verbose_name_plural = 'Уроки'
 
-    name = models.CharField(max_length=255, verbose_name='Название видео')
+    name = models.CharField(max_length=255, verbose_name='Название')
     link = models.CharField(max_length=255, verbose_name='Ссылка на видео')
     text_type = RichTextUploadingField(verbose_name='Текст урока')
     lesson_type = models.ForeignKey(LessonType, verbose_name='Выберите категорию видеоурока')
