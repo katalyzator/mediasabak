@@ -77,7 +77,9 @@
                 </li>
                 {% for item in all_lesson %}
                     <li><a href="{% url 'single_lesson' id=item.id %}">{{ item.name }}</a></li>
-
+                    {% if item.check == True %}
+                        <li><a href="{% url 'test_lesson' item.id %}">Промежуточный тест</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
 

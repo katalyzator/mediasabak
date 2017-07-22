@@ -31,7 +31,7 @@
             }, setup: function () {
                 var b = "";
                 e.options.counter && (b += '<div id="quiz-counter"></div>'), b += '<div id="questions">', a.each(f, function (c, d) {
-                    b += '<div class="question-container">', b += '<h2 class="extra_question">' + d.q_extra + "</h2>", b += '<p class="question">' + d.q + "</p>",   b += '<ul class="answers">', a.each(d.options, function (a, c) {
+                    b += '<div class="question-container">', b += '<h2 class="extra_question">' + d.q_extra + "</h2>", b += '<p class="question">' + d.q + "</p>", b += '<ul class="answers">', a.each(d.options, function (a, c) {
                         b += '<li><a href="#" data-index="' + a + '">' + c + "</a></li>"
                     }), b += "</ul>", b += "</div>"
                 }), b += "</div>", 0 === a(k).length && (b += '<div id="' + k.substr(1) + '">', b += '<p id="quiz-results"></p>', b += "</div>"), b += '<div id="quiz-controls">', b += '<p id="quiz-response"></p>', b += '<div id="quiz-buttons">', b += '<a href="#" id="quiz-next-btn">' + m + "</a>", b += '<a href="#" id="quiz-finish-btn">' + n + "</a>", b += '<a href="#" id="quiz-restart-btn">' + o + "</a>", b += "</div>", b += "</div>", e.$el.append(b).addClass("quiz-container quiz-start-state"), a("#quiz-counter").hide(), a(".question-container").hide(), a(l).hide(), a(k).hide(), a("#quiz-controls").hide()

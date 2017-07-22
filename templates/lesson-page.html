@@ -11,14 +11,14 @@
             <div class="lesson_container">
                 <div class="tabs-stage">
                     <div id="tab-1">
-{#                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>#}
+                        {#                        <h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h4>#}
 
                         <div class="slider">
-                                {% for item in images %}
-                                    <div class="sl_slide">
-                                        <img src="{{ item.image.url }}" alt="">
-                                    </div>
-                                {% endfor %}
+                            {% for item in images %}
+                                <div class="sl_slide">
+                                    <img src="{{ item.image.url }}" alt="">
+                                </div>
+                            {% endfor %}
 
                         </div>
                     </div>
@@ -65,13 +65,7 @@
                     </li>
                     <li>
                         <audio controls>
-                            {#                            <!—#}
-                            {#                            <source src="horse.ogg" type="audio/ogg">#}
-                            {#                            —>#}
-                            {#                            <!—#}
-                            {#                            <source src="horse.mp3" type="audio/mpeg">#}
-                            {#                            —>#}
-                            Your browser does not support the audio element.
+                            <source src="{{ lesson.audio.url }}" type="audio/mp3">
                         </audio>
                     </li>
                 </ul>
@@ -83,6 +77,9 @@
                 </li>
                 {% for item in all_lesson %}
                     <li><a href="{% url 'single_lesson' id=item.id %}">{{ item.name }}</a></li>
+                    {% if item.check == True %}
+                        <li><a href="{% url 'test_lesson' item.id %}">Промежуточный тест</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
 

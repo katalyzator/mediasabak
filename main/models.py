@@ -58,6 +58,7 @@ class Lesson(models.Model):
     audio = models.FileField(upload_to='files/audio', verbose_name='audiofile')
     imageslide = models.ManyToManyField(ImageSlide, verbose_name='slider image 765x410')
     test = models.ManyToManyField('LessonTest', verbose_name='Выберите тест', blank=True)
+    check = models.BooleanField(default=False, verbose_name='Показать тест')
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата создания')
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
@@ -72,6 +73,8 @@ class Test(models.Model):
 
     name = models.CharField(max_length=500, verbose_name='Вопрос теста')
     image = models.ImageField(upload_to='images/test', verbose_name='Картинка для теста')
+    correct = models.CharField(max_length=500, verbose_name='Сообщение правильного ответа')
+    incorrect = models.CharField(max_length=500, verbose_name='Сообщение неправильного ответа')
     true = models.BooleanField(verbose_name='Фейк')
     false = models.BooleanField(verbose_name='Не Фейк')
     test = models.ForeignKey('LessonTest', verbose_name='Выберите тесты', blank=True)
