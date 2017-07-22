@@ -64,3 +64,10 @@ def single_lesson(request, id):
     template = 'single-lesson.html'
 
     return render(request, template, context)
+
+
+def lesson_test(request):
+    context = {}
+    template = 'lesson_test.html'
+
+    return render(request, template, context)

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+    {% include 'header.html' %}
+    <main class="lesson_bg">
+        <div class="grid lesson_test">
+
+            <div id="quiz">
+                <div id="quiz-header">
+                    <h1>Название теста</h1>
+                    {#                    <p class="faded">A quiz about the plugin built by the plugin.</p>#}
+                </div>
+                <div id="quiz-start-screen">
+                    <p><a href="#" id="quiz-start-btn" class="quiz-button">Начать тест</a></p>
+                </div>
+            </div>
+
+
+            <ul class="list_lesson">
+                <li class="hamburger_collapsed">
+                    <div class="hamburger"></div>
+                </li>
+
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+
+
+            </ul>
+
+        </div>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#quiz').quiz({
+            //resultsScreen: '#results-screen',
+            //counter: false,
+            //homeButton: '#custom-home',
+            counterFormat: 'Вопрос %current из %total',
+            questions: [
+                {
+                    'q': 'Is jQuery required for this plugin? <br> <img class="quiz_img" src="{% static 'img/more_information.jpg' %}">',
+                    'q_extra': '',
+                    'options': [
+                        'Факт',
+                        'Мнение',
+                        'true'
+                    ],
+                    'correctIndex': 0,
+                    'correctResponse': 'Good job, that was obvious.',
+                    'incorrectResponse': 'Well, if you don\'t include it, your quiz won\'t work'
+                },
+                {
+                    'q': 'How do you use it?',
+                    'options': [
+                        'Факт',
+                        'Мнение'
+                    ],
+                    'correctIndex': 1,
+                    'correctResponse': 'Correct! Sounds more complicated than it really is.',
+                    'incorrectResponse': 'Come on, it\'s not that easy!'
+                },
+                {
+                    'q': 'The plugin can be configured to require a perfect score.',
+                    'options': [
+                        'Факт',
+                        'Мнение'
+                    ],
+                    'correctIndex': 0,
+                    'correctResponse': 'You\'re a genius! You just set allowIncorrect to true.',
+                    'incorrectResponse': 'Why you have no faith!? Just set allowIncorrect to true.'
+                },
+                {
+                    'q': 'How do you specify the questions and answers?',
+                    'options': [
+                        'Факт',
+                        'Мнение'
+                    ],
+                    'correctIndex': 0,
+                    'correctResponse': 'Correct! Refer to the documentation for the structure.',
+                    'incorrectResponse': 'Wrong! Do it in the javascript configuration. You might need to read the documentation.'
+                }
+            ]
+        });
+    </script>
+{% endblock %}
