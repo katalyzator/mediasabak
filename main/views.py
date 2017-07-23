@@ -18,7 +18,6 @@ def lesson_page_view(request, id):
 
     context = {"lesson": lesson, "images": sliderimage, "all_lesson": all_lesson}
     template = 'lesson-page.html'
-    print sliderimage
 
     return render(request, template, context)
 
@@ -68,7 +67,6 @@ def lesson_test(request, lesson_id):
     lesson = Lesson.objects.get(id=lesson_id)
     test = Test.objects.all().filter(test__lesson=lesson)
     all_lesson = Lesson.objects.all().filter(lesson_type_id=request.session['id'])
-    print  test
     context = {"test": test, "all_lesson": all_lesson}
     template = 'lesson_test.html'
 
