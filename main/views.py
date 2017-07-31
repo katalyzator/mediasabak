@@ -71,3 +71,10 @@ def lesson_test(request, lesson_id):
     template = 'lesson_test.html'
 
     return render(request, template, context)
+
+
+def book_view(request):
+    context = {}
+    template = 'book.html'
+
+    return render(request, template, context)
