@@ -30,7 +30,7 @@ class LessonType(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return self.name
+        return smart_unicode(self.name)
 
 
 class ImageSlide(models.Model):
@@ -44,7 +44,7 @@ class ImageSlide(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return self.name
+        return smart_unicode(self.name)
 
 
 class Lesson(models.Model):
